@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 
 import './App.module.css';
-import MyButton from '../MyButton/MyButton';
-import List from '../List/List';
-
+import Feedback from '../Feedback/Feedback';
+import Description from '../Description/Description';
+import Options from '../Options/Options';
+import Notification from '../Notification/Notification';
 function App() {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
@@ -31,16 +32,12 @@ function App() {
 
   return (
     <>
-      <div>
-        <MyButton onClick={onGood} DesBut='Good'/>
-        <MyButton onClick={onNeutral} DesBut='Neutral'/>
-        <MyButton onClick={onBad} DesBut='Bad'/>
-        <MyButton onClick={onReset} DesBut='Reset' total={total} />
-      </div>
-      <div>
-        <List  good={good} neutral={neutral} bad={bad} total={total} positive={positive} />
-      </div>
-    </>
+      <Description/>
+      <Options onBad={onBad} onGood={onGood} onNeutral={onNeutral} onReset={onReset} total={total}/>
+      { total===0 ? <Notification/> :<Feedback  good={good} neutral={neutral} bad={bad} total={total} positive={positive} /> }
+      
+    </> 
+    
   );
 }
 
