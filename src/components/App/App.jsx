@@ -25,10 +25,9 @@ function App() {
     setGood(0);
     setNeutral(0);
     setBad(0);
+    
   };
-   const clNameUL = () =>{
-    const clNameUL = () => total ? 'On' : 'Off';
-   }
+    
 
   return (
     <>
@@ -36,10 +35,10 @@ function App() {
         <MyButton onClick={onGood} DesBut='Good'/>
         <MyButton onClick={onNeutral} DesBut='Neutral'/>
         <MyButton onClick={onBad} DesBut='Bad'/>
-        <MyButton onClick={onReset} DesBut='Reset'/>
+        <MyButton onClick={onReset} DesBut='Reset' total={total} />
       </div>
       <div>
-        <List className={clNameUL} good={good} neutral={neutral} bad={bad} total={total} positive={positive} />
+        <List  good={good} neutral={neutral} bad={bad} total={total} positive={positive} />
       </div>
     </>
   );

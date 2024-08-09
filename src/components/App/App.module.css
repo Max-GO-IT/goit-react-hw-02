@@ -41,13 +41,11 @@
   color: #888;
 }
 
-/* ИЗМЕНЕНИЯ НАЧИНАЮТСЯ ЗДЕСЬ */
+
 .On {
-  color: green;
-  font-weight: bold;
+  
 }
 
 .Off {
-  color: gray;
-  font-weight: normal;
+  display:none;
 }
