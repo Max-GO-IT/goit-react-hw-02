@@ -27,9 +27,7 @@ function App() {
     setBad(0);
   };
    const clNameUL = () =>{
-      
-      return total?CSS.On:CSS.Off
-  //   // описать классы jn и off в css
+    const clNameUL = () => total ? 'On' : 'Off';
    }
 
   return (
