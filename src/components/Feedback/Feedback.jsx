@@ -1,4 +1,4 @@
-import './Feedback.module.css';
+import css from './Feedback.module.css';
 
 const Feedback = ({good,neutral,bad,total,positive,className}) => {
     
@@ -11,10 +11,7 @@ const Feedback = ({good,neutral,bad,total,positive,className}) => {
                 <li>Total: {total}</li>
                 <li>Positive: {positive}%</li>
             </ul>
-            )    
-
-    
- 
+            )     
    };
 
 export default Feedback;
